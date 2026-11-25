@@ -160,4 +160,20 @@ export const useRealtimeDriver = (driverId: string | null): Driver | null => {
 
 ---
 
+## 12. CODE ACCURACY RULE
+
+CODE ACCURACY RULE — mandatory for every task in this project:
+1. Before writing any code, read the exact spec/reference image/text character-by-character. Do not rely on memory, assumptions, or "close enough" guesses.
+2. Match EVERY detail exactly: text wording (including capitalization), colors, spacing, icons, numbers, and layout — nothing invented, nothing approximated.
+3. After writing the code, re-check it against the original spec/reference line-by-line before saying the task is done. If even one word, color, or value doesn't match, fix it before finishing.
+4. Never introduce new content, screens, text, or elements that are not explicitly present in the spec — even if it seems like a reasonable addition.
+5. If any part of the spec is unclear or not visible, STOP and ask instead of guessing or inventing.
+6. Test/verify the change actually renders correctly (no crashes, no broken imports, no typos in code) before reporting the task complete.
+7. If a previous fix is requested again because it wasn't done correctly the first time, treat it as critical — re-verify everything on that screen, not just the specific point mentioned, in case other things were also missed.
+8. Zero tolerance for wrong code: a single incorrect value, wrong color, wrong text, or broken functionality means the task is NOT complete — do not report success until it is 100% accurate.
+
+AI may make mistakes. Double-check all generated code, text, and colors against the reference before finalizing — every single time, on every task.
+
+---
+
 **[END OF ENGINEERING RULES - AOLO CABS REACT NATIVE]**

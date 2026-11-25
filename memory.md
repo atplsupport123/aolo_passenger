@@ -1,6 +1,6 @@
 # Project Memory & Session Context: AOLO Cabs React Native
 
-**Last Updated:** 2026-09-26T15:59:20+05:30  
+**Last Updated:** 2026-09-26T16:22:45+05:30  
 **Project Name:** AOLO Cabs Mobile App  
 **One-Line Summary:** AOLO Cabs is a multi-modal regional cab booking mobile app (Bihar/India intercity + city cab hailing), converted from an existing React web prototype (`aolo-passenger.apk/react-native-app`) and 31-page PDF specification (`AOLOCabs New UI - Fixed.pdf`).
 
@@ -49,15 +49,15 @@ These technical decisions are final and must not be re-debated or altered:
 
 ## 3. Current Project Status
 
-- **Phase 0 (Setup):** `[ ] Not Started` — Ready for initialization.
-- **Phase 1 (Auth & Onboarding):** `[ ] Not Started`
-- **Phase 2 (Core Booking Engine):** `[ ] Not Started`
-- **Phase 3 (Ride Management):** `[ ] Not Started`
-- **Phase 4 (Wallet & Payments):** `[ ] Not Started`
-- **Phase 5 (Extended Features):** `[ ] Not Started`
-- **Phase 6 (Corporate Portal):** `[ ] Not Started` (v1 Inquiry Modal scope defined)
-- **Phase 7 (Travel Mode):** `[ ] Not Started` (v1 Lead capture / affiliate webview scope defined)
-- **Phase 8 (Testing & Release):** `[ ] Not Started`
+- **Phase 0 (Setup):** `[DONE]` — Initialized Expo project, installed dependencies, setup theme engine, Firebase SDK, Zustand stores, and navigation.
+- **Phase 1 (Auth & Onboarding):** `[DONE]` — 3-Step Onboarding Slider (`OnboardingScreen.tsx`), Customer Login & SSO (`AuthScreen.tsx`).
+- **Phase 2 (Core Booking Engine):** `[DONE]` — `HomeScreen.tsx`, cross-platform `MapViewComponent`, location selector (`PickupDestinationFlow.tsx`), fleet comparison & fare breakup accordion (`BookingSheet.tsx`), driver radar triggers.
+- **Phase 3 (Ride Management):** `[DONE]` — Active ride tracking bar, 4-digit PIN disclosure (`RideProgressSheet.tsx`), 2-way text chat (`ChatDrawer.tsx`), tri-tab ride history dashboard (`RideHistory.tsx`).
+- **Phase 4 (Wallet & Payments):** `[DONE UI]` — Closed-loop wallet UI (`WalletSheet.tsx`), top-up presets, transaction statement ledger.
+- **Phase 5 (Extended Features):** `[DONE]` — Hourly rentals (`RentalBookingFlow.tsx`), Airport transfers (`AirportBookingFlow.tsx`), Saved hotspots & profile (`ProfileSheet.tsx`), Sidebar navigation menu (`SidebarDrawer.tsx`).
+- **Phase 6 (Corporate Portal):** `[DONE UI]` — Role-based enterprise portal (`CorporateScreen.tsx`).
+- **Phase 7 (Travel Mode):** `[DONE UI]` — Multi-modal travel portal (`TravelModeScreen.tsx`).
+- **Phase 8 (Testing & Release):** `[IN_PROGRESS]` — Dual-platform iOS/Android & Web bundler verification.
 
 Full checklist available at [`task.md`](file:///c:/Users/bk200/Desktop/ola/task.md).
 
@@ -67,6 +67,7 @@ Full checklist available at [`task.md`](file:///c:/Users/bk200/Desktop/ola/task.
 
 | Date | Category | Decision Made | Rationale / Context |
 | :--- | :--- | :--- | :--- |
+| **2026-09-26** | **Phase 0 & 1** | Built Expo project, navigation, theme system & Onboarding slider. | Completed Phase 0 setup & Phase 1 Onboarding with zero TypeScript errors (`npx tsc --noEmit` verified). |
 | **2026-09-26** | **Architecture** | Hybrid Backend Model (Cloud Run Node.js + Firebase Cloud Functions). | Cloud Run avoids cold-start latency for real-time driver dispatch while Cloud Functions handle async push notifications. |
 | **2026-09-26** | **State Management** | Selected Zustand over Redux Toolkit and Context API. | $<1.5\text{KB}$ bundle size, zero boilerplate, and atomic state selectors prevent map marker frame drops during 1s driver GPS updates. |
 | **2026-09-26** | **Design System** | Enforced AOLO Lime Green palette (`#A8E63C`, `#0A0A0A`, `#151915`, `#262B1E`). | Strict 1:1 visual fidelity with user brand request and `design.md`. |

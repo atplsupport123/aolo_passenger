@@ -17,6 +17,20 @@ expo-env.d.ts
 *.p12
 *.key
 *.mobileprovision
+*.keystore
+*.aab
+*.apk
+output-metadata.json
+google-services.json
+local.properties
+.gradle/
+build/
+.externalNativeBuild/
+.cxx/
+captures/
+*.hprof
+*.iml
+.idea/
 
 # Metro
 .metro-health-check*
@@ -32,6 +46,13 @@ yarn-error.*
 
 # local env files
 .env*.local
+server/.env
+
+# generated archives
+*.zip
+
+# extracted attachment text, not app source
+extracted_pdf_pages.json
 
 # typescript
 *.tsbuildinfo
